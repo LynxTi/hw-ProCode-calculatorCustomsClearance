@@ -8,20 +8,10 @@ form.addEventListener('submit', (event)=> {
    const fromDate = new FormData(event.target)
    const priceCar = Number( fromDate.get('priceCar') );
    const yearIssueCar = Number( fromDate.get('yearIssue') );
+   const carTypeValue = fromDate.get('carType');
 
-   const FindRadioBtn = (radiobuttons)=> {
-      for (const radioBtn of radiobuttons) {
-         if (radioBtn.checked) {
-            return radioBtn.value;
-         }
-      }
-   }
-
-   const FindTypeCar = ()=> {
-      const carTypeBtns = document.querySelectorAll('.radioBtnCarType');
-      const carType = FindRadioBtn(carTypeBtns);
-
-      switch (carType) {
+   const FindTypeCar = (carTypeValue)=> {
+      switch (carTypeValue) {
          case "passengerCar":
             return 1;
          case "electricCar":
@@ -35,7 +25,7 @@ form.addEventListener('submit', (event)=> {
       }
    }
 
-   const carType = FindTypeCar();
+   const carType = FindTypeCar(carTypeValue);
 
    const calculationCustomsClearance = (carType, priceCar, yearIssueCar)=> {
       const sumcustomsClearance = (carType * priceCar) * (yearIssueCar / 100);
