@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+    /* gap: 10px; */
+    flex-wrap: wrap;
+}
+
+.wrapper div {
+    width: 80px;
+    height: 80px;
+}
+
+.box1 {
+    background-color: red;
+}
+
+.wrapper .box2 {
+    background-color: blue;
+    width: 100%;
+}
+
+.box3 {
+    background-color: yellow;
+}

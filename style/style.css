@@ -1,0 +1,14 @@
+.formInsurance {
+  display: flex;
+  align-items: center;
+}
+
+.iputRadioContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.sumcustomsClearance {
+  width: 150px;
+  background-color: antiquewhite;
+}/*# sourceMappingURL=style.css.map */
